@@ -16,7 +16,7 @@ PauseMenu::PauseMenu(const sf::Font& font, bool &sound_on_arg, bool &music_on_ar
     back.setPosition(0,0);
     back.setFillColor(sf::Color(0,0,0,130));
 
-    click_buffer.loadFromFile("../aud/click2.wav");
+    click_buffer.loadFromFile("../rcs/aud/click2.wav");
     click.setBuffer(click_buffer);
 
     float button_height = button_resume.height();

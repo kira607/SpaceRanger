@@ -15,13 +15,13 @@ MainMenu::MainMenu(const sf::Font& font, bool &music_on_arg, bool &sounds_on_arg
         music_on(music_on_arg),
         sounds_on(sounds_on_arg)
 {
-    controls_texture.loadFromFile("../pic/controls.png");
+    controls_texture.loadFromFile("../rcs/pic/controls.png");
     controls.setTexture(controls_texture);
     controls.setPosition(-controls.getGlobalBounds().width-1,
                          0);
     controls.setScale(1,0.94);
 
-    click_buffer.loadFromFile("../aud/click2.wav");
+    click_buffer.loadFromFile("../rcs/aud/click2.wav");
     click.setBuffer(click_buffer);
 
     status = MainMenuStatus::kMain;
@@ -52,7 +52,7 @@ MainMenu::MainMenu(const sf::Font& font, bool &music_on_arg, bool &sounds_on_arg
     leader_board.setPosition(constants::screen_width + leader_board.width() + 1,0);
     leader_board.Read();
 
-    music.openFromFile("../mus/Sayer_Remembrance_Park.wav");
+    music.openFromFile("../rcs/mus/Sayer_Remembrance_Park.wav");
     music.setVolume(60);
 }
 

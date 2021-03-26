@@ -5,28 +5,51 @@ set(CMAKE_CXX_STANDARD 14)
 
 find_package(SFML 2.5 COMPONENTS graphics audio REQUIRED)
 
-add_executable(LCW main.cpp
-        spaceship.cpp
-        spaceship.h
-        constants.h
-        bullet.cpp
-        bullet.h
-        kamikaze.cpp
-        kamikaze.h
-        rand.cpp
-        rand.h
-        shooter.cpp
-        shooter.h
-        rotate_vector.cpp
-        rotate_vector.h
-        shooter_bullet.cpp
-        shooter_bullet.h
-        button.cpp
-        button.h
-        colors.h
-        health_orb.h
-        health_orb.cpp
-        main_menu.cpp main_menu.h mouse_cursor_in.cpp mouse_cursor_in.h game_status.h main_menu_signal.h leader_board.cpp leader_board.h leader_board_line.cpp leader_board_line.h pause_menu.cpp pause_menu.h pause_menu_signal.h game_over.cpp game_over.h input_box.cpp input_box.h inside_window.cpp inside_window.h intersect.cpp intersect.h)
+add_executable(
+        LCW 
+        src/main.cpp
+        src/spaceship.cpp
+        src/spaceship.h
+        src/constants.h
+        src/bullet.cpp
+        src/bullet.h
+        src/kamikaze.cpp
+        src/kamikaze.h
+        src/rand.cpp
+        src/rand.h
+        src/shooter.cpp
+        src/shooter.h
+        src/rotate_vector.cpp
+        src/rotate_vector.h
+        src/shooter_bullet.cpp
+        src/shooter_bullet.h
+        src/button.cpp
+        src/button.h
+        src/colors.h
+        src/health_orb.h
+        src/health_orb.cpp
+        src/main_menu.cpp 
+        src/main_menu.h 
+        src/mouse_cursor_in.cpp 
+        src/mouse_cursor_in.h 
+        src/game_status.h 
+        src/main_menu_signal.h 
+        src/leader_board.cpp 
+        src/leader_board.h 
+        src/leader_board_line.cpp 
+        src/leader_board_line.h 
+        src/pause_menu.cpp 
+        src/pause_menu.h 
+        src/pause_menu_signal.h 
+        src/game_over.cpp 
+        src/game_over.h 
+        src/input_box.cpp 
+        src/input_box.h 
+        src/inside_window.cpp 
+        src/inside_window.h 
+        src/intersect.cpp 
+        src/intersect.h
+)
 
 
 target_link_libraries(LCW sfml-graphics sfml-audio)

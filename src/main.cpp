@@ -43,22 +43,24 @@ int main()
     sf::Texture shoot_light_texture;
     sf::Texture shooter_light_texture;
 
-    if(!scope_texture.loadFromFile("../pic/ms2.png")) return -1;
-    if(!background_texture.loadFromFile("../pic/background.jpg")) return -1;
-    if(!bullet_texture.loadFromFile("../pic/bullet.png")) return -1;
-    if(!spaceship_texture.loadFromFile("../pic/spaceship.png")) return -1;
-    if(!kamikaze_texture.loadFromFile("../pic/kamikaze.png")) return -1;
-    if(!shooter_texture.loadFromFile("../pic/shooter.png")) return -1;
-    if(!shooter_bullet_texture.loadFromFile("../pic/shooter_bullet.png")) return -1;
-    if(!cursor_texture.loadFromFile("../pic/cursor.png")) return -1;
-    if(!health_orb_texture.loadFromFile("../pic/health_orb.png")) return -1;
-    if(!shoot_light_texture.loadFromFile("../pic/particle_shoot.png")) return -1;
-    if(!shooter_light_texture.loadFromFile("../pic/particle_shoot_shooter.png")) return -1;
+    std::string rcs = "../rcs/";
+
+    if(!scope_texture.loadFromFile(rcs + "pic/ms2.png")) return -1;
+    if(!background_texture.loadFromFile(rcs + "pic/background.jpg")) return -1;
+    if(!bullet_texture.loadFromFile(rcs + "pic/bullet.png")) return -1;
+    if(!spaceship_texture.loadFromFile(rcs + "pic/spaceship.png")) return -1;
+    if(!kamikaze_texture.loadFromFile(rcs + "pic/kamikaze.png")) return -1;
+    if(!shooter_texture.loadFromFile(rcs + "pic/shooter.png")) return -1;
+    if(!shooter_bullet_texture.loadFromFile(rcs + "pic/shooter_bullet.png")) return -1;
+    if(!cursor_texture.loadFromFile(rcs + "pic/cursor.png")) return -1;
+    if(!health_orb_texture.loadFromFile(rcs + "pic/health_orb.png")) return -1;
+    if(!shoot_light_texture.loadFromFile(rcs + "pic/particle_shoot.png")) return -1;
+    if(!shooter_light_texture.loadFromFile(rcs + "pic/particle_shoot_shooter.png")) return -1;
 
     //шрифты
 
     sf::Font font_mk_90;
-    font_mk_90.loadFromFile("../fonts/MK-90.ttf");
+    font_mk_90.loadFromFile(rcs + "fonts/MK-90.ttf");
 
     //Button b(font_mk_90);
     //cout << b.text.getCharacterSize();
@@ -127,20 +129,20 @@ int main()
     //звуки
 
     sf::SoundBuffer sound_buffer;
-    sound_buffer.loadFromFile("../aud/shoot.wav");
+    sound_buffer.loadFromFile(rcs + "aud/shoot.wav");
     sf::Sound shoot_sound(sound_buffer);
     sf::Sound shooter_sound(sound_buffer);
     shooter_sound.setPitch(1.3f);
 
     sf::SoundBuffer click_buffer;
-    click_buffer.loadFromFile("../aud/click2.wav");
+    click_buffer.loadFromFile(rcs + "aud/click2.wav");
     sf::Sound click;
     click.setBuffer(click_buffer);
 
     //музыка
 
     sf::Music game_music;
-    game_music.openFromFile("../mus/Sayer_Andromeda.wav");
+    game_music.openFromFile(rcs + "mus/Sayer_Andromeda.wav");
 
     //часы для появления врагов
 
